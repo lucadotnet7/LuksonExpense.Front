@@ -1,0 +1,20 @@
+.sidebarContainer {
+    display: flex;
+    align-items: start;
+    width: 0px;
+    height: 0px;
+}
+
+.sidebar {
+    height: 100vh;
+}
+
+.drawer {
+    min-width: 230px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--gray-200) !important;
+    background-color: var(--bg-dark) !important;
+}
