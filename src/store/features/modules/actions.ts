@@ -12,7 +12,7 @@ export const fetchModuleList = createAsyncThunk(
     async (_, {rejectWithValue}) => {
         try {
             const result = await modulesService.getModulesList();
-            return result.content;
+            return result;
         } catch (error) {
             let message = "Ocurrió un error al obtener el usuario, por favor intente mas tarde.";
 
@@ -23,6 +23,7 @@ export const fetchModuleList = createAsyncThunk(
                 message = responseMessage ?? MESSAGE_STATUS.get(errorCode) ?? message;
             }
 
+            //TODO: Implementar un alert o pop up alert
             console.log("ERROR: ", message);
 
             return rejectWithValue(error);

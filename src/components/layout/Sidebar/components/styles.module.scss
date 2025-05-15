@@ -4,17 +4,11 @@
     color: var(--text-color-dark) !important;
     border: none !important;
     margin-bottom: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .item:hover {
     background-color: #a0a0a0b6 !important;
-}
-
-.textCentered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 25px;
-    margin-left: 10px;
 }

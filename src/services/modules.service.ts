@@ -1,4 +1,3 @@
-import { IApiResponse } from "../domain/base/IApiResponse";
 import { IModuleList } from "../domain/module/IModule";
 import axios, { AxiosInstance } from "axios";
 
@@ -13,9 +12,9 @@ class ModulesService {
         });
     }
     
-    async getModulesList(): Promise<IApiResponse<IModuleList>> {
+    async getModulesList(): Promise<IModuleList> {
         try {
-            const { data } = await this.client.get<IApiResponse<IModuleList>>("List");
+            const { data } = await this.client.get<IModuleList>("List");
 
             return data;
         } catch (error) {

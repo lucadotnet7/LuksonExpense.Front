@@ -17,7 +17,7 @@ export default function Sidebar() {
     if (!content?.modules?.length) {
       getModules();
     }
-  }, [getModules, content]);
+  }, [content]);
 
   return (
     <div className={styles.sidebarContainer}>
@@ -47,6 +47,7 @@ export default function Sidebar() {
             key={module.name}
             text={module.name}
             icon={module.iconName}
+            route={module.route}
           />
         ))}
       </Drawer>

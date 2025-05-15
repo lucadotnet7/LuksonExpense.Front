@@ -1,7 +1,11 @@
 import HomeIcon from "@mui/icons-material/Home";
-import PaymentsIcon from "@mui/icons-material/Payment"
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 
 export const iconsMap: Record<string, React.ElementType> = {
     HomeIcon: HomeIcon,
-    PaymentsIcon: PaymentsIcon
+    AccountBalanceWalletIcon: AccountBalanceWalletIcon,
+    CompareArrowsIcon: CompareArrowsIcon,
+    AutoAwesomeMosaicIcon: AutoAwesomeMosaicIcon
 }
