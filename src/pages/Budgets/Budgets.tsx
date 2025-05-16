@@ -1,9 +1,16 @@
 import styles from "./styles.module.scss";
+import { Box, Divider } from "@mui/material";
+import Header from "./components/Header";
+import BudgetTable from "./components/BudgetTable/BudgetTable";
 
 export default function Budgets() {
   return (
     <div className={styles.container}>
-        Budgets
+      <Box component="section" className={styles.content}>
+        <Header />
+        <Divider />
+        <BudgetTable />
+      </Box>
     </div>
-  )
+  );
 }
