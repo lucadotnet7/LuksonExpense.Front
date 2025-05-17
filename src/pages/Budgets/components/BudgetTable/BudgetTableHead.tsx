@@ -1,16 +1,15 @@
-import { TableHead, TableRow } from "@mui/material";
-import { StyledTableCell } from "./StyledTableCell";
+import { TableCell, TableHead, TableRow } from "@mui/material";
 
 export default function BudgetTableHead() {
   return (
     <TableHead>
       <TableRow>
-        <StyledTableCell>Nombre</StyledTableCell>
-        <StyledTableCell align="right">Descripción</StyledTableCell>
-        <StyledTableCell align="right">Período</StyledTableCell>
-        <StyledTableCell align="right">Monto</StyledTableCell>
-        <StyledTableCell align="right">Fecha creación</StyledTableCell>
-        <StyledTableCell align="right">Acciones</StyledTableCell>
+        <TableCell>Nombre</TableCell>
+        <TableCell align="right">Descripción</TableCell>
+        <TableCell align="right">Período</TableCell>
+        <TableCell align="right">Monto</TableCell>
+        <TableCell align="right">Fecha creación</TableCell>
+        <TableCell align="right">Acciones</TableCell>
       </TableRow>
     </TableHead>
   );

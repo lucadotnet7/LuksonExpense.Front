@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import styles from "./styles.module.scss";
+import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { iconsMap } from "../../../../utils/iconsMapper";
 import { useNavigate } from "react-router";
 
@@ -19,13 +18,15 @@ export default function SidebarItem({ text, icon, route }: ISidebarItemProps) {
   }
 
   return (
-    <Button
-      className={styles.item}
-      variant="outlined"
-      startIcon={IconComponent ? <IconComponent /> : null}
-      onClick={handleRedirection}
-    >
-      <span>{text}</span>
-    </Button>
+    <ListItem key={text} disablePadding>
+      <ListItemButton onClick={handleRedirection}>
+        <ListItemIcon>
+          {IconComponent ? <IconComponent /> : null}
+        </ListItemIcon>
+        <ListItemText>
+          {text}
+        </ListItemText>
+      </ListItemButton>
+    </ListItem>    
   );
 }

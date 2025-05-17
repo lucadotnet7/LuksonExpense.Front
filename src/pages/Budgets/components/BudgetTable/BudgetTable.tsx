@@ -28,28 +28,28 @@ const rows: IBudgetTableBodyRows[] = [
     "15/05/2025"
   ),
   createData(
-    "Presupuesto 1",
+    "Presupuesto 2",
     "Presupuesto definido solo para test",
     "01/05/2025 - 31/05/2025",
     2000000,
     "15/05/2025"
   ),
   createData(
-    "Presupuesto 1",
+    "Presupuesto 3",
     "Presupuesto definido solo para test",
     "01/05/2025 - 31/05/2025",
     2000000,
     "15/05/2025"
   ),
   createData(
-    "Presupuesto 1",
+    "Presupuesto 4",
     "Presupuesto definido solo para test",
     "01/05/2025 - 31/05/2025",
     2000000,
     "15/05/2025"
   ),
   createData(
-    "Presupuesto 1",
+    "Presupuesto 5",
     "Presupuesto definido solo para test",
     "01/05/2025 - 31/05/2025",
     2000000,

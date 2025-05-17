@@ -1,17 +1,7 @@
-import { IconButton, styled, TableBody, TableRow } from "@mui/material";
-import { StyledTableCell } from "./StyledTableCell";
+import { IconButton, TableBody, TableCell, TableRow } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
 
 export interface IBudgetTableBodyRows {
   name: string;
@@ -29,15 +19,15 @@ export default function BudgetTableBody({
   return (
     <TableBody>
       {rows.map((row) => (
-        <StyledTableRow key={row.name}>
-          <StyledTableCell component="th" scope="row">
+        <TableRow key={row.name}>
+          <TableCell component="th" scope="row">
             {row.name}
-          </StyledTableCell>
-          <StyledTableCell align="right">{row.description}</StyledTableCell>
-          <StyledTableCell align="right">{row.period}</StyledTableCell>
-          <StyledTableCell align="right">{row.amount}</StyledTableCell>
-          <StyledTableCell align="right">{row.createdAt}</StyledTableCell>
-          <StyledTableCell align="right">
+          </TableCell>
+          <TableCell align="right">{row.description}</TableCell>
+          <TableCell align="right">{row.period}</TableCell>
+          <TableCell align="right">{row.amount}</TableCell>
+          <TableCell align="right">{row.createdAt}</TableCell>
+          <TableCell align="right">
             <IconButton aria-label="editar" color="primary">
               <RemoveRedEyeIcon />
             </IconButton>
@@ -47,8 +37,8 @@ export default function BudgetTableBody({
             <IconButton aria-label="eliminar" sx={{ color: "red" }}>
               <DeleteIcon />
             </IconButton>
-          </StyledTableCell>
-        </StyledTableRow>
+          </TableCell>
+        </TableRow>
       ))}
     </TableBody>
   );

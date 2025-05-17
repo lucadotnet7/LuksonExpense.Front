@@ -1,4 +1,4 @@
-import { IconButton, Drawer } from "@mui/material";
+import { IconButton, Drawer, List } from "@mui/material";
 import ViewSidebarIcon from "@mui/icons-material/ViewSidebar";
 import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
@@ -42,14 +42,16 @@ export default function Sidebar() {
           },
         }}
       >
-        {content?.modules.map((module) => (
-          <SidebarItem
-            key={module.name}
-            text={module.name}
-            icon={module.iconName}
-            route={module.route}
-          />
-        ))}
+        <List>
+          {content?.modules.map((module) => (
+            <SidebarItem
+              key={module.name}
+              text={module.name}
+              icon={module.iconName}
+              route={module.route}
+            />
+          ))}
+        </List>
       </Drawer>
     </div>
   );

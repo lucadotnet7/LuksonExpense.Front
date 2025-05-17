@@ -1,6 +1,7 @@
 export interface IBudget {
-    title: string;
-    description: string;
-    amount: number;
-    date: Date;
+    BudgetName: string;
+    BudgetDescription?: string | undefined;
+    BudgetFrom: string;
+    BudgetTo: string;
+    Amount: number;
 }
