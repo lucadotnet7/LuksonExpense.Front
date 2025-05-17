@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import InformationCard from "./components/InformationCard/InformationCard";
-import BudgetSelector from "../../components/budgets/BudgetSelector/BudgetSelector";
+import BudgetSelector from "./components/BudgetSelector/BudgetSelector";
 
 export default function Home() {
   return (

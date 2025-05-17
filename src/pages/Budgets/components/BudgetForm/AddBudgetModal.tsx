@@ -1,7 +1,7 @@
 import { Box, Modal } from '@mui/material'
-import AddBudgetForm from './AddBudgetForm';
-import useBudget from '../../../hooks/budgets/useBudget';
 import { useEffect } from 'react';
+import useBudget from '../../../../hooks/budgets/useBudget';
+import AddBudgetForm from '../BudgetForm/AddBudgetForm';
 
 export interface IAddBudgetProps {
     open: boolean;
@@ -20,7 +20,7 @@ const style = {
     p: 4,
 };
 
-export default function AddBudget({open, setOpen}: IAddBudgetProps) {
+export default function AddBudgetModal({open, setOpen}: IAddBudgetProps) {
   const { content } = useBudget();
   
   const handleClose = () => {

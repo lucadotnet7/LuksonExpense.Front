@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import styles from "../../styles.module.scss";
 import { useState } from "react";
-import AddBudget from "../../../../components/budgets/AddBudget/AddBudget";
+import AddBudgetModal from "../BudgetForm/AddBudgetModal";
 
 export default function Header() {
   const [addBudget, setAddBudget] = useState(false);
@@ -17,7 +17,7 @@ export default function Header() {
       <Button variant="contained" endIcon={<AddIcon />} onClick={handleAddBudget}>
         Agregar
       </Button>
-      <AddBudget open={addBudget} setOpen={setAddBudget} />
+      <AddBudgetModal open={addBudget} setOpen={setAddBudget} />
     </Box>
   );
 }

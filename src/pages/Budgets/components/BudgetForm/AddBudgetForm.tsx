@@ -3,11 +3,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import SendIcon from '@mui/icons-material/Send';
 import { useForm } from 'react-hook-form';
 import { budgetFormSchema, BudgetFormValues } from './formSchema';
-import { IBudget } from '../../../domain/IBudget';
-import { useEffect, useState } from 'react';
-import { formatDateInput } from '../../../utils/format';
-import useBudget from '../../../hooks/budgets/useBudget';
-import { mapFormToBudgetRequest } from '../../../adapters/mapFormToBudgetRequest';
+import { IBudget } from '../../../../domain/IBudget';
+import { useState } from 'react';
+import { formatDateInput } from '../../../../utils/format';
+import useBudget from '../../../../hooks/budgets/useBudget';
+import { mapFormToBudgetRequest } from '../../../../adapters/mapFormToBudgetRequest';
 
 type AddBudgetFormProps = {
     budget?: IBudget;
@@ -38,7 +38,7 @@ export default function AddBudgetForm({ budget }: AddBudgetFormProps) {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Typography variant='h6' sx={{mb: 2}}>
-                Agregar un nuevo presupuesto
+                {budget ? 'Editar presupuesto' : 'Agregar un nuevo presupuesto'}
             </Typography>
             <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
                 <FormControl>
@@ -85,8 +85,15 @@ export default function AddBudgetForm({ budget }: AddBudgetFormProps) {
                 </FormControl>
             </Box>
 
-            <Button loading={isLoading} loadingPosition="end" variant="contained" endIcon={<SendIcon />} onClick={handleSubmit(onSubmit)} sx={{mt: 2, width: '100%'}} disabled={!isValid}  >
-                {budget ? 'Actualizar' : 'Agregar'}
+            <Button 
+                loading={isLoading} 
+                loadingPosition="end" 
+                variant="contained" 
+                endIcon={<SendIcon />} 
+                onClick={handleSubmit(onSubmit)} 
+                sx={{mt: 2, width: '100%'}} 
+                disabled={!isValid}>
+                    {budget ? 'Editar' : 'Agregar'}
             </Button>
         </form>
     )

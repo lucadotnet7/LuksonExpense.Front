@@ -1,4 +1,4 @@
-import { BudgetFormValues } from "../components/budgets/AddBudget/formSchema";
+import { BudgetFormValues } from "../pages/Budgets/components/BudgetForm/formSchema";
 import { IRequest } from "../domain/base/IRequest";
 import { IBudget } from "../domain/IBudget";
 
